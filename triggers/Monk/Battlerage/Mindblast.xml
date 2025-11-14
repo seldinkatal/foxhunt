@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Mindblast</name>
+			<script>local affs = { "weakness", "sensitivity" }
+if matches[1]:find("weakened body") then
+	affs = { "weakness" }
+elseif matches[1]:find("jangled nerves") then
+	affs = { "sensitivity" }
+end
+system.hunting.funcs.handleRageHit(matches[2], matches[3], "synergy", false, nil, affs)</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^Marshalling (you)r psychic reserves, you hurl them in a blast at (.+?)\.</string>
+				<string>^(\w+) focuses intently on (.+) and a visible wave of force sweeps</string>
+				<string>^Marshalling (you)r psychic reserves, you hurl them in a blast at (.+), clamping</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Cataclysm</name>
+			<script>local affs = {"stun", "recklessness"}
+--if matches[1]:find("raging cataclysm") then
+--	affs = { "sensitivity" }
+--elseif not matches[1]:find("glancing blow") then
+--	affs = { "sensitivity" }
+--end
+system.hunting.funcs.handleRageHit(matches[2], matches[3], "synergy", false, nil, affs)</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(You) unleash a raging cataclysm of destruction, the area directly surrounding (.+) becoming nothing but fire and ash\.$</string>
+				<string>^(You) prepare to unleash a cataclysm against (.+), but \w+ anticipates your intent and moves out of your target area\.$</string>
+				<string>^The flames that compose (\w+) burn brighter for a moment, but seeming to sense some danger (.+) quickly moves away from \w+ current position\.$</string>
+				<string>^As the flames that compose (\w+) burn ever brighter, the area surrounding (.+) is consumed in a raging cataclysm of destruction, the inferno burning white hot as it engulfs \w+\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

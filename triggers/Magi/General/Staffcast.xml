@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Staffcast</name>
+			<script>if matches[2] == "you" or matches[2] == "You" then
+	system.hunting.vars.targetName = matches[3]
+	system.hunting.vars.attacking = true
+end
+
+if system.hunting.funcs.isHuntingTarget(matches[3]) then
+	system.hunting.funcs.razeShield()
+end</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(\w+) points? .+ at (.+) and \w+ screams in pain as \w+ skin begins to freeze and crack\.$</string>
+				<string>^(\w+) points? .+ at (.+), and a stream of bile-like acid streams out, covering \w+</string>
+				<string>^(You) point .+ at (.+), and cause a bolt of lightning to cascade out and roar screaming into \w+\.$</string>
+				<string>^As (\w+) points? .+ at (.+), a scintilla of bright, burning light shoots out, striking \w+ with focused elemental power\.$</string>
+				<string>^(\w+) points .+ at (.+), and a bolt of lightning cascades out and roars, screaming, into \w+ body\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

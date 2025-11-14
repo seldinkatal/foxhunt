@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Jinzuku</name>
+			<script>local self = matches[3]
+local target = matches[2]
+if matches[1]:find("lashing out") then
+	self = matches[2]
+	target = matches[3]
+end
+
+if self == "you" or self == "You" then
+	system.hunting.vars.targetName = target
+	system.hunting.vars.attacking = true
+end
+
+if system.hunting.funcs.isHuntingTarget(target) then
+	system.hunting.funcs.razeShield()
+end</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^Stepping to the side of (.+), (you) drive .+ at \w+ kidneys\.$</string>
+				<string>^(You) flow around (.+), .+ lashing out in a swift strike at \w+ kidneys\.$</string>
+				<string>^Stepping to the side of (.+), (\w+) drives .+ into \w+ vulnerable kidneys\.$</string>
+				<string>^Flowing around (.+) like water, (\w+) lashes out with a swift thrust of .+ at \w+ kidneys\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

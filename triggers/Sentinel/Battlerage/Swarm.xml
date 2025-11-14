@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Swarm</name>
+			<script>local affs = { "aeon", "inhibit" }
+if matches[1]:find("slowed form") then
+	affs = { "aeon" }
+elseif matches[1]:find("healing flesh") then
+	affs = { "inhibit" }
+end
+system.hunting.funcs.handleRageHit(matches[2], matches[3], "synergy", false, nil, affs)</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(You) utter a loud, buzzing call, and a swarm of wasps rushes in but they do little more than annoy (.+)\.$</string>
+				<string>^(\w+) utters a loud, buzzing call and a swarm of wasps rushes in but they do little more than annoy (.+)\.$</string>
+				<string>^(\w+) utters a loud, buzzing call and a swarm of wasps rushes in, swarming over (.+)'s slowed form and stinging \w+ flesh\.$</string>
+				<string>^(You) utter a loud, buzzing call and a swarm of wasps rushes in, swarming over (.+)'s slowed form and stinging \w+ flesh\.$</string>
+				<string>^(\w+) utters a loud, buzzing call and a swarm of wasps rushes in, swarming over (.+)'s form and stinging \w+slow\-healing flesh\.$</string>
+				<string>^(You) utter a loud, buzzing call and a swarm of wasps rushes in, swarming over (.+)'s form and stinging \w+ slow\-healing flesh\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

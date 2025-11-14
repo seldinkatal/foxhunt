@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Firefall</name>
+			<script>local affs = {"clumsiness", "recklessness"}
+if matches[1]:find("recklessly") then
+	affs = { "recklessness" }
+elseif matches[1]:find("clumsy form") then
+	affs = { "clumsiness" }
+end
+system.hunting.funcs.handleRageHit(matches[2], matches[3], "synergy", false, nil, affs)</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(\w+) raises? \w+ hands dramatically and summons? a mighty flaming rock from the sky down at (.+), but \w+</string>
+				<string>^(\w+) raises? \w+ hands dramatically and summons? a mighty flaming rock from the sky\. (.+) (recklessly)</string>
+				<string>^(\w+) raises? \w+ hands dramatically and summons? a mighty flaming rock from the sky that slams into the clumsy form of (.+)\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

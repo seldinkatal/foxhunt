@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Form Change</name>
+			<script>system.hunting.defs.attackStrategems.monk.kata = 0</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>You spin your staff in the opening sequence of the form of Tykonos, snapping into a ready stance.</string>
+				<string>Twirling your staff, you sink into the calm required for the form of Willows Shaken by the Wind.</string>
+				<string>Dropping into a lower stance, you snap your weapon into an offensive position, tensing your muscles in preparation for the form of Willows in Rain Storm.</string>
+				<string>Rising onto the balls of your feet, you prepare to begin the deadly form of the Live Oak.</string>
+				<string>You let your eyes fall closed and instinct guide you as you flow into the form of Gaital.</string>
+				<string>You allow your kai to flow through you, circulating throughout your limbs and down your weapon in preparation to begin the form of the Unrelenting Storm.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

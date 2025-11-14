@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Stormflare</name>
+			<script>local affs = { "amnesia", "fear" }
+if matches[1]:find("absent.mindedly") then
+	affs = { "amnesia" }
+elseif matches[1]:find("panicked movements") then
+	affs = { "fear" }
+end
+system.hunting.funcs.handleRageHit(matches[2], matches[3], "synergy", false, nil, affs)</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(\w+) breathes? a series of lightning strikes around (.+), but </string>
+				<string>^(\w+) breathes? a series of lightning strikes around (.+)\. \w+ absent\-mindedly</string>
+				<string>^(\w+) breathes? a series of lightning strikes around (.+)\. \w+ panicked movements</string>
+				<string>^(You) breathe a series of lightning strikes in a lattice around (.+), but</string>
+				<string>^(You) breathe a series of lightning strikes in a lattice around (.+)\. \w+ absent\-mindedly</string>
+				<string>^(You) breathe a series of lightning strikes in a lattice around (.+)\. \w+ panicked movements</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

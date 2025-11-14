@@ -1,0 +1,1864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>Whitelists</name>
+			<packageName></packageName>
+			<script>system.hunting.defs.mobWhitelist = system.hunting.defs.mobWhitelist or {}
+</script>
+			<eventHandlerList />
+			<Script isActive="yes" isFolder="no">
+				<name>the Sunderlands</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Sunderlands"] = {
+	"a transparent spectre", 
+	"an armoured millipede",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the frozen tundra</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the frozen tundra"] = {
+	"a massive wendigo",
+	"a tundra wolf",
+	"a woolly mammoth",
+	"a sabre walrus",
+	"a diamond fish",
+	"Shmeeg, an old wendigo",
+	"an ice bear",
+	"a crystal spider",
+	"an ice scarab",
+	"an ice shard",
+	"an ice golem",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the ruins of Phereklos</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the ruins of Phereklos"] = {
+	"a multi-headed water hydra",
+	"a hideous, writhing squid",
+	"a school of clownfish",
+	"a black sea bass",
+	"a bleeding salt water cod",
+	"a brilliantly coloured sea anemone",
+	"an enormous gulper eel",
+	"a translucent jellyfish",
+	"a blue-spotted stingray",
+	"an abyssal chargefish",
+	"a large bull shark",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Valho Coast</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Valho Coast"] = {
+	"Torturer Abd",
+	"a murkworm",
+	"a mad cultist",
+	"a Penumbran fiend",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Caverns of Nuskuwe</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Caverns of Nuskuwe"] = {
+	"a rock leech",
+	"a rock beetle",
+	"a crimson pyrapede",
+	"a pregnant wyrm",
+	"an ancient wyrm",
+	"a crimson angler",
+	"a wyrm whelp",
+	"a fire wyrm",
+	"the Chieftain of Nuskuwe", 
+	"the Shaman of Nuskuwe", 
+	"a shaman's apprentice", 
+	"the stonemason of Nuskuwe", 
+	"a Nuskuwen hero", 
+	"a Nuskuwen man", 
+	"a Nuskuwen woman", 
+	"an ailing Nuskuwen elder", 
+	"a Nuskuwen child", 
+	"a surly Nuskuwen youth",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Ruins of Morindar</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Ruins of Morindar"] = {
+	"a hideous nel'dorath", 
+	"a cursed revenant", 
+	"a hunchbacked feyr", 
+	"a feral gangrel", 
+	"a corpulent rilma worm", 
+	"a fearsome cave hunter", 
+	"a greyish-green culuma", 
+	"a shimmering gloomwing moth", 
+	"an armoured nahar", 
+	"a menacing gargoyle", 
+	"a jagged quorin",
+	"a revenant tontra",
+	"Scorn, the cavehunter bat",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Isaia</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Isaia"] = {
+	"an amorak",
+	"a snow-white ennelin",
+	"a giant zelahia",
+	"a moenai",
+	"a silvery eel",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Hriddan Settlement</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Hriddan Settlement"] = {
+	"a crystalline ice demon",
+	"Kolyartus, the Blizzard",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Vents of Hthrak</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Vents of Hthrak"] = {
+	"an ozhera minorus",
+	"an ozhera majorus",
+	"an ozhera chick",
+	"a sleek dirangi",
+	"a lean dirangi",
+	"a dirangi cub",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Istar Jungle</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Istar Jungle"] = {
+	"an armoured boalisk",
+	"a bearded pig",
+	"a morpho caterpillar",
+	"a monstrous gamling spider",
+	"an agile kamatlan",
+	"a blue-crowned ifrit",
+	"a flying viper",
+	"a giant gwaeron",
+	"a brightly feathered olbi",
+	"a foot-pad lizard",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Saiha'balan Grotto</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Saiha'balan Grotto"] = {
+	"a gargantuan orbweaver",
+	"a great grey slug",
+	"a large, albino centipede",
+	"a leucistic salamander",
+	"a diminutive earwig",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the village of Qurnok</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the village of Qurnok"] = {
+	"a Qurnok warrior",
+	"a Qurnok guard",
+	"a huge, ferocious crocodile",
+	"an enormous anaconda",
+	"a large swarm of flies",
+	"a large muskrat",
+   "Ulvna, the witch of Qurnok",
+   "Rurnog, the Herpetologist",
+   "Aldroga, the Dendrologist"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Isle of New Hope</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Isle of New Hope"] = {
+	"a spearhead shark",
+	"a giant sea turtle",
+	"a silver panther",
+	"a blue-bottomed switchfly",
+	"a colony of fruit bats", 
+	"a snow-white mazaran", 
+	"a russet mazaran", 
+	"an ebony mazaran", 
+	"a painted mazaran", 
+	"a saltwater crocodile", 
+	"a female baboon", 
+	"a feral dog",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Mhojave Desert</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Mhojave Desert"] = {
+	"a thoqqua", 
+	"an unformed thing of chaos", 
+	"a monitor lizard", 
+	"a slope-backed hyena", 
+	"a desert fox", 
+	"a rattlesnake", 
+	"a sidewinder", 
+	"a gecko lizard", 
+	"a hardy jarbo", 
+	"a giant red scorpion", 
+	"a yellow scorpion", 
+	"a large black scorpion"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Manara Burrow</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Manara Burrow"] = {
+	"a vicious gnoll soldier", 
+	"a smirking gnoll slaver", 
+	"a flail-wielding gnoll sentry", 
+	"a sneering gnoll guard", 
+	"an apathetic gnoll sentinel", 
+	"an arrogant gnoll woman", 
+--	"a water-bearing Mingruk woman",
+--	"a thin Mingruk woman"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Northreach Forest</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Northreach Forest"] = {
+	"a brown wolf",
+	"a white tailed doe",
+	"a grizzly bear",
+	"a large buck",
+	"a speckled fawn",
+	"a shaggy bobcat",
+	"a black wolf",
+	"an incorporeal shadow"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Darkenwood Forest</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Darkenwood Forest"] = {
+	"a dark arachnoi man",
+	"a dark arachnoi woman",
+	"a huge pulsating spider",
+	"a ghastly apparition",
+	"an incorporeal shadow",
+	"a midnight stag",
+	"a cave bear"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Azdun Dungeon</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Azdun Dungeon"] = {
+	"Lachesis, the Spider Queen",
+	"a guardian spider",
+	"a huge pulsating spider",
+	"a large pulsating spider",
+	"a medium pulsating spider",
+	"a vampire",
+	"Xylthus the Outcast",
+	"a revolting ghoul",
+	"a ghast",
+	"a wraith",
+	"a decaying zombie",
+	"a wight",
+	"a mummy",
+	"a hill giant",
+	"a cave bear",
+	"an ankheg",
+	"a giant bat",
+	"a goblin ghoul",
+	"a goblin zombie",
+	"a hobgoblin warrior",
+	"a goblin sergeant",
+	"a goblin soldier",
+	"a goblin smith",
+	"a goblin foreman",
+	"a goblin miner",
+	"a goblin slave"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Vashnar Mountains</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Vashnar Mountains"] = {
+	"a muscular mountain lion",
+	"a bighorn sheep"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>a filthy goblin village</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["a filthy goblin village"] = {
+	"a goblin chieftain",
+	"the goblin matron",
+	"the goblin shaman",
+	"the goblin lieutenant",
+	"an elderly goblin",
+	"a goblin guard",
+	"a goblin youth",
+	"a goblin girl",
+	"an energetic goblin boy",
+	"a small goblin boy"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Barony of Dun Valley</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Barony of Dun Valley"] = {
+	"Vukub Ysin'zhu, the Ogre Baron",
+	"an ogre captain",
+	"an orc captain",
+	"Balam Agab, the ogre archmage",
+	"Log'obi, an ogre shaman",
+	"Xulu, an orc witchdoctor",
+	"an ogre sentry",
+	"an ogre knight",
+	"an orc guard",
+	"an orc sergeant",
+	"an ogre cook",
+	"an orc cook",
+	"an orc soldier",
+	"an ogre bowman",
+	"an orc archer",
+	"a drunk orc",
+	"an orc blacksmith",
+	"an ogre firetender",
+	"an ogre weaponsmith",
+	"an ogre huntress",
+	"an ogre warrior",
+	"a female orc",
+	"an adolescent female orc",
+	"a juvenile orc",
+	"a catfish",
+	"an enormous swamp wyvern",
+	"a giant water strider",
+	"a spinorthos",
+	"a warthog",
+	"a mud crab",
+	"a giant mud beetle",
+	"a plague rat",
+	"a mist wraith",
+	"a swamp dryad",
+	"a lost soul",
+	"a cloud of gnats",
+	"a muscular mountain lion",
+	"a bighorn sheep",
+	"a sleek jaguar",
+	"the Great Bull Elephant",
+	"a greyish green crocodile",
+	"a male gorilla",
+	"a large, fat hippo",
+	"a crab",
+	"a dangerous water snake",
+	"a poisonous snake",
+	"a beautiful yellow-eared parrot"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Moghedu</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Moghedu"] = {
+	"Sir Temelin, Knight Commander of Moghedu",
+	"a mhun mage",
+	"the Great Mhunna",
+	"Commander Kalesh",
+	"Sir Mertyn, Grand Champion of Moghedu",
+	"an elite mhun keeper",
+	"a mhun knight",
+	"a mhun bodyguard",
+   "Guard Captain Chelak",
+	"Guard Captain Haedra",
+	"Guard Captain Darion",
+	"the mage Tatynne",
+	"Alaran, the Master Trader",
+	"Chronicler Deshedai",
+	"Gishuan, the blacksmith",
+	"Cook Oshalo",
+	"Deban, the mhun barkeep",
+	"the mhun cook",
+	"a mhun architect",
+	"the mhun Captain of the Guard",
+	"a Moghedu blacksmith",
+	"a master mhun demolitionist",
+	"a mhun demolitionist",
+	"a humble cleric",
+	"a mhun scholar",
+	"a mhun guard",
+	"a mhun conjuror",
+	"a mhun archer",
+	"a mhun warrior",
+	"a mhun labourer",
+	"a master mhun miner",
+	"a mhun miner",
+	"a mhun merchant",
+	"a mhun guard trainee",
+	"a mhun scout",
+	"a mhun woman",
+	"an adolescent mhun",
+	"a lithe mhun child"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Dakhota Hills</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Dakhota Hills"] = {
+	"a massive gour",
+	"a grey wolf"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Tir Murann</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Tir Murann"] = {
+	"Rakrr, the Vertani swordsmaster",
+	"Daqsool, the Qoul of Tir Murann",
+	"Dynas, the gour trainer",
+	"Iayh, a mage of House Feranki",
+	"Vewig, the Magelord of House Tsez",
+	"Rohase, Captain of the Guard",
+	"Rakwor, the Vertani Barkeep",
+	"Ohmut, the Vertan craftswoman",
+	"a House Tsez air mage",
+	"a Vertani guard",
+   "a scimitar-wielding Vertani soldier",
+   "a House Feranki mage",
+   "Damek, Feranki Magelord",
+   "Ayod'nai, Whisperer of the All",
+   "Battle Captain Miingruan",
+	"a drunken Vertani",
+	"Ver'osy, the Vertani priestess",
+	"Ghaser, the Vertani cook",
+	"a massive gour",
+--	"Byor, a Vertani youth",
+	"a hulking striped moirah",
+	"a massive xabat"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Quartz Peak</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Quartz Peak"] = {
+	"the wrogroth",
+	"Leesha, the ursu packmother",
+	"Toogar, the ursu shaman",
+	"Burgam, the hunter",
+	"Turga, the ursu midwife",
+	"an ursu man",
+	"Trag, the taryen wise man",
+	"a taryen man",
+	"Gillib, a young ursu",
+	"Gnral, the taryen chieftain",
+	"Kurgo, the Ursu chief"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Siroccian Mountains</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Siroccian Mountains"] = {
+	"a foul-smelling orc",
+	"a vicious wolverine",
+	"a large treesnake",
+	"a white-striped skunk"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>an Orcish outpost</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["an Orcish outpost"] = {
+	"Grashna, the tanner",
+	"Thrakma, the butcher",
+	"Gothmog, the orc witch doctor",
+	"an orc bodyguard",
+	"an orc soldier",
+	"a diminutive orc servant",
+	"an orc woman",
+	"a ragged orc child",
+--	"a mountain goat"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>a Dwarven camp</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["a Dwarven camp"] = {
+	"a senior miner",
+	"a common mine labourer",
+	"a resting miner",
+	"Velga, the inventory woman",
+	"Grimbold, the dwarf cook",
+	"Olgmir, a local drunkard",
+	"Urthel, a dwarf woman",
+	"a dwarf girl",
+	"a dwarf nurse",
+	"an injured dwarf",
+	"a dwarf miner",
+	"a sifting dwarf",
+	"a dwarf gatekeeper",
+	"a Sirrocian fighting cat",
+	"the mine foreman",
+	"Holgir, the narcissist",
+	"Viggo, a dwarf boy",
+	"Adalgar, chieftain of the Siroccian encampment",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Sea Lion Cove</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Sea Lion Cove"] = {
+	"an albino vampire spider",
+	"a giant vampire spider",
+	"a vampire spider",
+	"a vampire spider hatchling",
+	"a man-eating shark",
+	"a scarred sea lion",
+	"a female sea lion",
+	"a barnacle encrusted oyster",
+	"a red king crab",
+	"a sea lion pup",
+	"a baby sea turtle",
+	"a playful sea sprite"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the village of Tasur'ke</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the village of Tasur'ke"] = {
+	"a man-eating shark",
+	"a barnacle encrusted oyster",
+	"a bottlenose dolphin"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Sparrow's Rest</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Sparrow's Rest"] = {
+	"an ethereal spirit wolf",
+	"a shrieking magpie",
+	"a sleek, vicious red fox",
+	"a large sapphire-winged sparrow"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Granite Hills</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Granite Hills"] = {
+	"Hurthorg the hill giant",
+	"Raethon, a female hill giant",
+	"a tremendous hill giant",
+	"a female hill giant",
+	"a hill giant child",
+	"Hoarug, a whimpering giant child"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Western Ithmia</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Western Ithmia"] = {
+	"a flower maiden"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Isle of Harae</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Isle of Harae"] = {
+	"a bone golem",
+	"a poharaehe",
+	"a wasp queen",
+	"a wasp soldier",
+	"a wasp drone"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Eastern shore</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Eastern shore"] = {
+	"a king barracuda",
+	"a barnacle encrusted oyster",
+	"a striped dolphin"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Lupine Hunting Grounds</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Lupine Hunting Grounds"] = {
+	"a fell shewolf",
+	"a fell werewolf",
+	"a sleek black werepanther",
+	"a fierce black panther",
+	"a pregnant panther",
+	"a weretigress",
+	"an irate mountain goat",
+	"a massive vakha",
+	"a large bainligor",
+	"a massive gohlbrorn",
+	"a giant fire eel",
+	"an elder centaur priestess",
+	"a wild centaur",
+	"a giant red scorpion",
+	"a slope-backed hyena",
+	"a massive brown boar",
+	"a fearsome lion",
+	"a slender snake",
+	"a wide-eyed primate",
+	"a centaur colt",
+	"a long, horned snake",
+	"a forest basilisk",
+	"a hardy jarbo", 
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Green Lake</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Green Lake"] = {
+	"a massive bear",
+	"a large fox",
+	"a python",
+	"a huge mosquito",
+	"a mud eel",
+	"a tawny pelican",
+	"a slimy catfish",
+	"a massive freshwater clam",
+	"a spiny toad",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Mesmerium</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Mesmerium"] = {
+	"a dream horror"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Dardanic Grasslands</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Dardanic Grasslands"] = {
+	"a shaggy buffalo",
+	"a savannah grizzly",
+	"a savannah lioness",
+	"a savannah lion",
+	"a green-banded amphisbaena",
+	"a shepherd",
+	"a sheep",
+	"a woolly barmotez",
+	"a tsetse fly",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Village of Bitterfork</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Village of Bitterfork"] = {
+	"Melancton, the Mayor",
+	"Belen, the shaman",
+	"Vanac, the leatherworker",
+	"Thaleia",
+	"Lyen, a chubby innkeeper",
+	"a bear hunter",
+	"a wiry fisherman",
+	"a village man",
+	"a village woman",
+	"a grubby child",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Sangre Plains</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Sangre Plains"] = {
+		"Kuralil, the Light-Footed",
+		"Methats, the Divine Wind",
+		"Selinde, an Arcadian royal guard",
+		"the Flowing Robes Champion",
+		"Atlantia",
+		"a mischievous ward",
+		"an Arcadian royal guard",
+		"an armoured Exemplar",
+		"a mounted Exemplar",
+		"a robed Exemplar",
+		"a bow-wielding Exemplar",
+		"a studious Adept",
+		"an eager Adept",
+		"a young Adept",
+		"a rugged buffalo",
+		"a sleek antelope",
+		"a vulture",
+		"a sheep",
+		"a groundhog",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Forest Watch</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Forest Watch"] = {
+		"a slugbeast",
+		"the Zombie Lord",
+		"a zombie noble",
+		"a ghoul smith",
+		"a dryad zombie",
+		"the Buckawn Lord",
+		"a young buckawn witchdoctor",
+		"a buckawn apprentice",
+		"a buckawn royal guard",
+		"a buckawn swordsman",
+		"a buckawn youth", 
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Valley of Actar</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Valley of Actar"] = {
+		"a snowy owl",
+		"a creamy white goat",
+		"an alert deer",
+		"a large rabbit with one black ear",
+		"a brown floppy-eared rabbit",
+		"a crow",
+		"Merrygold, the village elder",
+		"Tobold, a robust halfling man",
+		"Bodo, a halfling guard",
+		"Biba, a halfling woman",
+		"a harried halfling woman",
+		"a halfling woman",
+		"a halfling fisherman",
+		"a studious, young halfling",
+		"a short halfling",
+		"a cute halfling girl",
+		"a tiny halfling child",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Lost City of Kasmarkin</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Lost City of Kasmarkin"] = {
+		"a mummified troll guardian",
+		"a ghostly troll senator",
+		"a marsh ooze",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Aalen Forest</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Aalen Forest"] = {
+		"Alduril, the head ranger",
+		"Stlerin, the guard",
+		"a Tsol'aa ranger",
+		"Ta'hena, the Tsol'aa sage",
+		"Zeuris, the Tsol'aa baker",
+		"Celaabi, the Tsol'aa Queen Mother",
+		"Jaaran, Tsol'aa guard",
+		"an ancient tsol'aa",
+		"Anaari, the lyricist",
+		"Kassan, the healer",
+		"Tsuane, the fletcher",
+		"Kallion, the adolescent",
+		"Thaa'lis, the elder druid",
+		"Ta'lissu, the tattoo artist",
+		"Tsellias the Tsol'aa alchemist",
+		"Caletar the Collector",
+		"Tsalinas, the weaver",
+		"Keleyn, Tsol'aa guard",
+		"Tu'eras, the Tsol'aa King", 
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Mount Piraeus</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Mount Piraeus"] = {
+		"an ageing mountain lion",
+		"a king salmon",
+		"a small beaver",
+		"a cyclops guard",
+		"Themus, a young cyclops shepherd",
+		"a cyclops woman",
+		"Steropes, the cyclops smith",
+		"Dora, a cyclops cook",
+		"Arges, Chieftain of the Cyclopes",
+		"Hynes, the cyclops mechanic", 
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>a network of caves beneath New Thera</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["a network of caves beneath New Thera"] = {
+		"the beast in the crypt",
+		"an elder Qui'sas",
+		"Isiva, the Blood Maiden",
+		"Dakrol, the Swiftblade",
+		"a master assassin",
+		"a Quisalis overseer",
+		"a Qui'sas hunter",
+		"a Qui'sas assassin",
+		"Nevon Talkar",
+		"a minor earth elemental",
+		"Westriv Talkar",
+		"Varenia, the Venomous",
+		"Katzynn Fireforge",
+		"a Quisalis assassin",
+		"a Quisalis sentry",
+		"a Quisalis guard",
+		"an Initiate of the Mark",
+		"a dwarven master builder"
+}
+
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Den of the Quisalis</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Den of the Quisalis"] = {
+		"Sifri, the Quisalis Overseer",
+		"Kimitia, a Quisalis Assassin",
+		"Stefanos Bladesong",
+		"Gil, the Quisalis Enforcer",
+		"a master assassin",
+		"a Qui'sas assassin",
+		"a cloaked assassin",
+		"Baliar Blackthorne",
+		"Westriv Talkar",
+		"Mistress Livastra",
+		"Varenia, the Venomous",
+		"Zen'fi Haar'chen",
+		"Master Jotbla",
+		"a Quisalis assassin",
+		"a Quisalis guard",
+		"a Quisalis sentry",
+		"an Initiate of the Mark",
+		"a trained war vulture",
+		"Yuroc, the Black Wing",
+		"an apprentice assassin",
+		"a beaten and bruised prisoner",
+		"Jerak, Captain of the Guard",
+		"a large hound",
+		"an enormous hound",
+		"a deranged assassin",
+		"Karinda Talkar",
+		"Dalvas Sareish",
+		"a mage",
+		"a female mage",
+		"an elderly mage",
+		"a scholar of Nishnatoba",
+		"Infari",
+		"Anasyd",
+		"a large wolf",
+		"a withered husk",
+		"Xerafel",
+		"an orb of shimmering light",
+		"a horrifying abomination"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Xhaiden Dale</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Xhaiden Dale"] = {
+		"a wild caribou",
+		"a fierce black crane",
+--		"a red-eyed crane",
+--		"a star-nosed mole",
+--		"a white coyote",
+--		"a Jiva monk of the Obele",
+--		"Irsich, the Mahjed of the Obele",
+--		"Colonius, the Gardener",
+--		"Olvic, the Historian",
+--		"Escine, the Deacon",
+--		"Palusta, the stonemason",
+--		"Vetiver van Veen",
+--		"Laukemper, Provost of Onorel",
+--		"Tooske, the Provost's wife",
+--		"Ebnis, the Onorel fisher",
+--		"a bulky yak",
+--		"Didi Ghengo",
+--		"Franz Elestahr",
+--		"Pirin, an elderly woman",
+--		"a colossal water strider",
+--		"a gargantuan ishkynd worm",
+--		"a Ganeve warrior",
+--		"Thorben Rezesh, Ganeve Man-At-Arms",
+--		"Sarat, Mistress of Necromancy",
+--		"Nevio Rezesh", 
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Caves of Delmarin</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Caves of Delmarin"] = {
+		"a Dyissan warrior",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Keep of Belladona</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Keep of Belladona"] = {
+		"Hecuba, the Witch of Darkness and Chaos",
+		"Mistandraxus, the flame drake",
+		"Quel'zar, the Surgeon",
+		"Glixx, the mutant",
+		"Tigrinya, the Librarian",
+		"Naggamantex, the torturer",
+		"Grollum, the Sentinel",
+		"Gloom, the Occultist",
+		"Glixx, the Mutant",
+		"Smythe, the dwarven trainer",
+		"Geh'shya, the Black Dragon",
+		"a manticore",
+		"a two-headed ogre",
+		"Minoria, handmaiden of Belladona",
+		"Malorea, Handmaiden of Belladona",
+		"Eritrea, Handmaiden of Belladona",
+		"Ephesia, Handmaiden of Belladona",
+		"Derryk, the eunuch",
+		"Cosmina, the Saint",
+		"Belladona, the Demon Whore",
+		"Helf'ga, the ogress cook",
+		"Grothgar, the ogre sergeant",
+		"Tara, the peasant",
+		"Smirnick, the Serpentlord",
+		"Sylvos, the Weak",
+		"a mist-walker",
+		"a dark minotaur",
+		"a courtier",
+		"an imp",
+		"a black hell-hound",
+		"a fearsome crocodile",
+		"a spectral guardian",
+		"a giant leech",
+		"a giant toad"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Creville Asylum</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Creville Asylum"] = {
+		"Screw-eye, the inmate superior",
+		"a hooded man",
+		"a sullen atavian inmate",
+		"Wlor, the asylum watchman",
+		"a one-eyed, convulsing priest",
+		"a mutated horkvali inmate",
+		"a sneering psychopathic inmate",
+		"a grotesque xorani inmate",
+		"Darien, the shock therapist",
+		"a young shaman inmate",
+		"a shivering dwarf with a dull pick axe",
+--		"Suire, a mauled, narcissistic siren",
+		"Ulthor, the coroner",
+		"an axe-wielding dwarven patient",
+		"a burly troll dweller",
+		"a maniacal atavian inmate",
+		"a cannibalistic lunatic",
+		"a restless, drugged druid",
+		"Xzavien, the scientist",
+		"a blood-spattered jester",
+		"a crawling Tsol'aa inmate",
+		"a deranged rajamalan dweller",
+--		"a shady dealer",
+--		"Villinix, the herbalist",
+--		"a doctor with numerous facial wounds",
+--		"a grinning imp",
+		"a hulking bush of hogsweed",
+		"a feral grey lynx",
+--		"a fearful surgeon",
+		"a blind, knife-wielding woman",
+--		"a great horned owl",
+		"a massive rat snake",
+		"a ragged vulture",
+		"a long-tailed weasel",
+--		"a beaten prisoner",
+--		"an injured maid",
+--		"a restrained nurse",
+--		"a terror-stricken nurse",
+--		"a delirious receptionist",
+		"a great aphid",
+		"an emaciated squirrel",
+		"a swarm of black flies",
+		"an enormous black rat",
+--		"a deeply wounded nurse",
+		"a bloated female cockroach",
+		"a fleshy white maggot",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the sewers of Ashtan</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the sewers of Ashtan"] = {
+		"a murderous thug",
+		"a black rat",
+		"a rat",
+		"an old rat",
+		"a young rat",
+		"a baby rat",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the sewers of Cyrene</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the sewers of Cyrene"] = {
+		"a blood leech",
+		"a giant blood leech",
+		"a black rat",
+		"a rat",
+		"an old rat",
+		"a young rat",
+		"a baby rat",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Dungeon of the Beastlords</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Dungeon of the Beastlords"] = {
+		"a bestial, two-headed canine",
+		"a mysterious cloaked figure",
+		"a vicious, three-headed cerberus",
+		"Glash, the three-headed cerberus",
+		"a crazed ritualist",
+		"Jarxrit",
+		"a cowled initiate",
+		"a bloodied acolyte",
+		"Inish, the head cultist",
+		"a richly dressed attendant",
+		"a sect ritualist",
+		"Hellitha, the High Priestess",
+		"Grithaxodon, the Beast",
+		"Bearnath, the Beast Cultist",
+		"a warrior ophidian",
+		"the ophidian chieftain, Skt'all",
+		"a juvenile ophidian",
+		"a female ophidian"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Southern Vashnar Mountains</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Southern Vashnar Mountains"] = {
+		"a bighorn sheep",
+		"a mountain grizzly",
+		"a mountain drake",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>deep below the sea</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["deep below the sea"] = {
+		"a malevolent sea dragon",
+		"a gigantic sea spider",
+		"a duskfin tuna",
+		"a redfin tuna",
+		"a pale, four-fin ray",
+		"a coelacanth",
+		"a spotted fangtooth"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Tenwat Prison</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Tenwat Prison"] = {
+		"Saunders, the prison warden",
+		"Alsilan, the condemned",
+		"a creaking rust golem",
+		"a crazed prison guard",
+		"a berserk prisoner",
+		"a howling blood mastiff",
+		"a screaming head",
+		"a wall of limbs",
+		"a pair of grasping hands",
+		"a pulsing artery"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Colchis</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Colchis"] = {
+		"a giant sea serpent",
+		"Frewynne, the Warrior Chieftess",
+		"Vendril, Master Assassin",
+		"Vorin, High Shaman",
+		"Thorlis, the Warrior Chieftain",
+		"Vray, a fortress servant",
+		"Siathana, the Healer",
+		"a cloaked assassin",
+		"a weathered fisherman",
+		"a Colchian warrior",
+		"a Colchian warrioress"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Port of Umbrin</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Port of Umbrin"] = {
+		"Freyil Marteila",
+		"High General Boracin",
+		"Colonel Antariz",
+		"Colonel Survane",
+		"Colonel Meliane",
+		"Major Poatril",
+		"Major Avanguird",
+		"Lieutenant Mavlait",
+		"Master Healer Rivtan",
+		"an Umbrinite raider",
+		"an Umbrinite crossbowman",
+		"an Umbrinite marksman",
+		"an Umbrinite combat medic",
+		"an Umbrinite conscript",
+		"an Umbrinite trainee",
+		"Reliar, the Umbrinite Merchant"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Underworld</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Underworld"] = {
+		"a steel-encased Death Knight",
+		"a deadly obsidian scorpion",
+		"a pale-skinned, humanoid vampire",
+		"a transparent, glowing wight",
+		"a colossal, hulking ghoul",
+		"a ponderous ictheli",
+		"a rotting zombie",
+		"an intensely bright wisp",
+		"a luminescent ghost",
+		"a clattering skeleton"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Zanzibaar</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Zanzibaar"] = {
+		"Djulsan, King of Zanzibaar",
+		"a royal guard of Zanzibaar",
+		"Tiamenjiara, the court conjuror",
+		"Alsimhinda, Queen of Zanzibaar",
+		"Makran, an island trader",
+		"Prince Sindharkan",
+		"Fimsirun, a foreign prince",
+		"Akhadd, a visiting noble",
+		"a bare-chested sailor",
+		"a skulking thief",
+		"a burly dockhand",
+		"a palace servant",
+		"Semmor, the dhow-maker",
+		"an island man",
+		"an island woman",
+		"an islander in a dhow",
+		"an island child",
+		"a Baarian tiger",
+		"a giant tortoise",
+		"a sleek mongoose",
+		"a silvery scombra",
+		"a sea nettle",
+		"a ghost crab",
+		"a spotted porpoise",
+		"Lordan Colse",
+		"a surly smuggler",
+		"a pretty wench",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Annwyn</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Annwyn"] = {
+	"a fairy Knight of Sidhe",
+	"a Fomori of Unsidhe",
+	"an Unsidhe Banshee",
+	"a fairy Lady of Sidhe",
+	"a crazed kelpie",
+	"a wild kelpie",
+	"a lake fairy",
+	"a cunning black wolf",
+	"a majestic lion",
+	"a moon bear",
+	"a fairy mistress",
+	"a swamp dweller",
+	"a slender selkie",
+	"a slick-looking selkie",
+	"Shaylee, Lady of the Waves",
+	"Balorr, Chieftain of the Fomori",
+	"Faylinn, Lady of Unsidhe Court",
+	"Gwyllion, the Swamp Crone",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Isle of Polyargos</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Isle of Polyargos"] = {
+		"Kru'lax, the Harpy Queen",
+		"a filthy harpy",
+		"an old leper",
+		"a pathetic leper",
+		"a leper child",
+		"a barnacle encrusted oyster",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Caverns of Riagath</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Caverns of Riagath"] = {
+		"Rurogan, Lord of the Rucktawn",
+		"Farshen",
+		"Xifeni the Wise",
+		"Tylorga, Captain of the Guard",
+--		"Lolath",
+		"Aline",
+		"Kisheth",
+		"a gigantic angler fish",
+		"Shial, shaman of the Gyrog",
+		"Leiga, the Gyrog matriarch",
+		"Rinaga",
+		"Ikaride",
+		"a burly troll guard",
+		"a sturdy troll woman",
+		"Munfawa, a hunchbacked troll",
+		"Tannel",
+		"Elder Tilath",
+		"Ninea",
+		"a kalok",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Artists' Collective Trading Post</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Artists' Collective Trading Post"] = {
+		"a taciturn merchant",
+		"a travelling merchant",
+		"Kalieth, the perfumier",
+		"Tarani, a Tsol'aa artisan",
+		"Rotha, a young merchant",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Martei Memorial Tradepost</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Martei Memorial Tradepost"] = {
+		"Islaban, the tanner",
+		"Seril, a Shastaan merchant",
+		"Deggan, a Jaruvian craftsman",
+		"Brendel, the fishmonger",
+		"Maerlyle, a young housewife",
+		"a travelling merchant",
+		"a taciturn merchant",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Rheodad</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Rheodad"] = {
+		"a woolly guanaco",
+		"a shaggy rhea",
+		"a forest lynx",
+		"a rheodine hare",
+		"a silver-back hare",
+		"a swarm of mosquitoes",
+		"a double-crested cormorant",
+		"a little sandpiper",
+		"a playful sea otter",
+		"a sapphire penguin",
+		"a nesting sapphire penguin",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Wegava Valley</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Wegava Valley"] = {
+		"Jawara, the razahr strategist",
+		"Fela, Patriarch of the razahr",
+		"Bahati, mate of Fela",
+		"Chisulo, the razahr smith",
+		"a large male razahr",
+		"a hulking female razahr",
+		"a razahr hatchling",
+		"Oeru, a burly young gnoll",
+		"Nukilik, the gnollish tyrant",
+		"Cupun, the gnollish smith",
+		"Chena, the healer",
+		"a fierce gnoll sentinel",
+		"a gnoll woman",
+		"a young gnoll",
+		"Sefu, the slave",
+		"a frowning deniigi",
+		"a fluffy arneck",
+		"Akiak, the outcast",
+		"Jafari",
+		"a gnoll fisherman",
+		"a plump ptarmigan",
+		"the Mahk",
+		"a large grey sturgeon",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Village of Aran'riod</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Village of Aran'riod"] = {
+		"A'issem, Chieftess of the Yriluawe",
+		"the Yriluawen warrior, O'sild",
+		"A'roden, the Mistress of Threads",
+		"A'dene, Priestess of the Holy Three",
+		"A'leess, Oracle of the Yriluawe",
+		"O'mem, the shepherd",
+		"the stablehand, O'suiwr",
+		"A'urnir, the beadworker",
+		"O'ising, Yriluawe shaman",
+		"the trader, O'inead",
+		"the cook, O'seru",
+		"a Yriluawen warrior",
+		"an Elder of the Yriluawe",
+		"a man of the Yriluawe",
+		"a woman of the Yriluawe",
+		"a Yriluawen boy",
+		"a Yriluawen girl",
+		"a war steed",
+		"a wild and savage pony",
+		"a sheep",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Istarion</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Istarion"] = {
+		"a whisper spider outrider",
+		"a sword spider outrider",
+		"a watch spider outrider",
+		"a whisper spider",
+		"a watch spider",
+		"a sword spider",
+		"a whisper spiderling",
+		"a watch spiderling",
+		"a sword spiderling",
+		"Tsui'zhir, Whisper Ascendant",
+		"Shantuir, Watch Ascendant",
+		"Khurthia, Sword Ascendant",
+		"Maal'ryn Asgarai, Outrider Ascendant",
+		"a knight of the King's Guard",
+		"Vargalast Megurun, Revered Counsellor",
+		"Sariontari, Queen of Istarion",
+		"Dalendra Asgarai, Revered Counsellor",
+		"Sindrastar Nerrinth, the High Counsellor",
+		"Avathar'an, the King of Istarion",
+		"Hethern Silwenil, Revered Counsellor",
+		"Santhrar, a young prince",
+		"Cervantha, the Caretaker",
+		"Saldesari Elisanil, Warren Ascendant",
+		"a priestess of Life",
+		"a haruspex of Life",
+		"a joyful Tsol'dasi villager",
+		"a hooded Tsol'dasi villager",
+		"an austere Tsol'dasi",
+		"a grey-haired Tsol'dasi",
+		"a studious Tsol'dasi",
+		"an extravagantly dressed Tsol'dasi",
+		"a Tsol'dasi villager",
+		"a Tsol'dasi girl",
+		"a Tsol'dasi boy",
+		"a Tsol'dasi merchant",
+}
+	</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Ulangi Isles</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Ulangi Isles"] = {
+--		"the forest lich Melkhiour",
+		"the King Stag",
+--		"Balai the Scorned",
+		"a majestic moose",
+		"a large buck",
+		"a feisty badger",
+		"a gorgeous pheasant",
+		"a speckled fawn",
+--		"a white tailed doe",
+--		"a shaggy bobcat",
+--		"Kr'Tachi the General",
+--		"a horkval guard",
+--		"a horkval worker",
+--		"a horkval drone",
+--		"the Horkval Queen",
+		"a barnacle encrusted oyster",
+--		"Oorangu the Wise",
+--		"a grook scholar",
+--		"a grook woman",
+--		"a grook child",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Port of Mysia</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Port of Mysia"] = {
+		"a pirate lass",
+		"a pirate with an eye-patch",
+		"a scantily dressed prostitute",
+		"a drunken pirate",
+		"Greybeard, an aged pirate",
+		"Trixy, Siren of Mysia",
+		"Anan, Priest of Mysia",
+		"Niran, the first mate",
+		"Delmar, a pirate with a peg-leg",
+		"Favian, a towering bartender",
+--		"Steele, the Mysian Cook",
+		"Enys, a denounced cleric",
+		"Captain Kelley, Mayor of Mysia",
+		"Cassian, a blue-robed mage",
+		"Kavan, the first mate",
+		"Aneurin, the card shark",
+		"Brodie, a bawdy pirate",
+		"Cressa, the roulette attendant",
+		"Jarvace, the Xorani brawler",
+		"Captain Jarvace, Mayor of Mysia",
+		"a squat pig",
+		"a chicken",
+--		"Tai, the spider monkey",
+--		"Devon, a bow-legged pirate",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Clockwork Isle</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Clockwork Isle"] = {
+		"a wire-frame man",
+		"a large squid",
+		"a suit of guardian armour",
+		"a drudge goon",
+		"an animated porcelain doll",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Suliel Island</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Suliel Island"] = {
+		"a polar bear",
+		"a gelid hydra",
+		"a malevolent iridwyn",
+		"a slender arctic fox",
+		"a greater yawo",
+		"a silvery normine",
+		"a speckled harp seal",
+		"a docile tundra wolf",
+		"a hulking omatu",
+		"a gentle female reindeer",
+		"a hardy reindeer",
+		"a village woman",
+		"Radhen, the fisherman",
+		"Jadha, the carpenter",
+		"a playful young boy",
+		"a warmly dressed fisherman",
+		"Avhor, the village chieftain",
+		"Eldharen, the healer",
+		"a playful young boy",
+		"Vhilen, the head fisherman",
+		"a mercenary guard",
+		"a Sulien infantryman",
+		"a mercenary captain",
+		"Laniq, the Craftsman",
+		"Garadh, the Hunter",
+		"Dharia, the Sulien cook",
+		"Teroq, the trainer",
+		"Zhingidh, the Keeper",
+		"Miren, the watchman",
+		"a lokela beast",
+		"a sluggish yawo",
+		"a statue of an ice golem",
+		"an ice sculpture",
+		"a mercenary warrior",
+		"Anaman, the warrior",
+		"Crissa, the warrioress",
+		"Emo, the architect",
+		"Kindor, the master trainer",
+		"Oliviar, the overseer",
+		"Velkan, the Dwarven blacksmith",
+		"a playful young girl",
+		"Loridha, the huntress",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Northern Vasnari Mountains</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Northern Vasnari Mountains"] = {
+		"a rabid grizzly bear",
+		"an enormous cave bat",
+		"a disfigured ram",
+		"a bloodthirsty jackdaw",
+		"a savage morsuleus",
+		"a masked ogre",
+		"a disgusting goblin",
+		"a hulking hobgoblin",
+		"an ice hellion",
+		"a water leech",
+		"a scruffy brigand",
+		"a fierce brigand",
+		"a golden gryphon",
+		"a mother gryphon",
+		"a young gryphon",
+		"Tenith'oru",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Sirocco Fortress</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Sirocco Fortress"] = {
+		"Duke Semiro",
+		"Duchess Alorina",
+		"Daerlain, an elderly noblewoman",
+		"Jadorno, a cloaked nobleman",
+		"Chancellor Ashem",
+		"the Captain of the Guard",
+		"the fortress steward",
+		"Halohan, a humble cleric",
+		"a bearded cook",
+		"a proud ducal guard",
+		"a knight of the Siroccian Order",
+		"a stout footsoldier",
+		"a fortress guardsman",
+		"an alert watchman",
+		"a keen-eyed archer",
+		"Samial, a sleek Rajamala",
+		"a huge, writhing serpent",
+		"a rotund prison guard",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Mirror Caves</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Mirror Caves"] = {
+		"a massive jade spider",
+		"a malevolent echo",
+		"a giant quartz beetle",
+		"a ghost bat",
+		"a rope lichen",
+		"a plated fernbeast",
+		"a rockhide basilisk",
+		"a bioluminescent ooze",
+		"a lost spirit",
+		"a crystal georith",
+		"an aged Sileg",
+		"an adult Sileg",
+		"a juvenile Sileg"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Mines of Iskadar</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Mines of Iskadar"] = {
+		"Bartok Stonefist, Leader of the Blackfire clan",
+		"Glath Ironhammer, Leader of the Bloodstone clan",
+		"High Priest Asdath",
+		"Breana Ironhammer",
+		"Thraken, the Bloodstone shaman",
+		"Brok, the Blackfire shaman",
+		"a dwarven priest",
+		"a priest",
+		"a nervous acolyte",
+		"an alert dwarven guard",
+		"a delirious miner",
+		"Grelda Stonefist",
+		"a blood-soaked dwarven miner",
+		"a dirt-encrusted miner",
+		"a bloodstained miner",
+		"a dishevelled dwarven miner",
+		"a convulsing miner",
+		"a vomiting miner",
+		"a young dwarven miner",
+		"an adolescent miner",
+		"an injured miner"
+}
+
+	</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Central Vasnari Mountains</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Central Vasnari Mountains"] = {
+		"a rabid grizzly bear",
+		"an enormous cave bat",
+		"a disfigured ram",
+		"a bloodthirsty jackdaw"
+}
+	</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Judgement Mountain</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Judgement Mountain"] = {
+		"Grandmaster Kevadrin",
+		"Marna",
+		"Ciglo, the historian",
+		"Davkas",
+		"Qiland",
+		"a stern monk",
+		"a humble monk",
+		"a diligent monk",
+		"a young monk",
+		"Begath, the Migri mage",
+		"Dakk, leader of the Migri",
+		"a Migri warrior",
+		"an undead minion"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the salt mines of Ulsyndar</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the salt mines of Ulsyndar"] = {
+		"Anwell, commander of the prison guard",
+		"Anttan, the mess cook",
+		"an Ulsyndar guard",
+		"an off-duty prison guard",
+		"a prison miner",
+		"a disgruntled salt miner"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>The Gulf of Nilakantha</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["The Gulf of Nilakantha"] = {
+		"a gigantic sea spider",
+		"a redfin tuna",
+		"a hammerhead shark",
+		"a whiptail stingray",
+		"a massive jellyfish"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Coastal Highway</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Coastal Highway"] = {
+		"a mounted Asteri knight",
+		"a proud ducal guard",
+		"a weathered guard",
+		"a sneaky bandit"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Grukai Swamp</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Grukai Swamp"] = {
+		"a sinister glubber",
+		"a vicious dulosi majorus",
+		"an aggressive dulosi minorus",
+		"an energetic red turtle",
+		"a putrid green crab",
+		"a giant leech",
+		"an enormous anaconda",
+		"a mud urchin",
+		"a thornback frog",
+		"a crocodile",
+		"a school of vicious piranha",
+		"a vicious swarm of acacidic ants",
+		"a multicoloured boa constrictor",
+		"a reedy green buom",
+		"a transparent cahno",
+		"an azure koparfish",
+		"a bunyip",
+		"a swarm of mosquitoes",
+		"a serpentine tssalo",
+		"a tentacled polyp",
+		"a shark-like junda",
+		"a giant puffball",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Battlesite of Mourning Pass</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Battlesite of Mourning Pass"] = {
+		"a heavily armoured warrior sylphid beetle",
+		"a lost knight errant",
+		"a winged worker sylphid beetle",
+		"a queen sylphid beetle",
+		"a larval sylphid queen",
+		"Knight Commander Lord Ethran Rani",
+		"Commander Farista Errikale",
+		"Commander Malrian Kyra",
+		"a sturdy knight",
+		"a proud knight errant",
+		"an injured knight",
+		"a dishevelled young squire",
+		"a battered Ashtani lieutenant",
+		"a bedraggled Ashtani foot soldier"
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Northern Atrousian Jungle</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Northern Atrousian Jungle"] = {
+		"a disfigured ogre",
+		"Hul'fro, a towering ogre",
+		"a domesticated water buffalo",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Remains of Dralhu Hryre</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Remains of Dralhu Hryre"] = {
+		"Eraon, the armourer",
+		"Matriarch Trisa",
+		"Overseer Breoln",
+		"Patriarch Deniar",
+		"Winre, the bird keeper",
+		"a brown-haired trainee",
+		"a dirty blond-haired trainee",
+		"Patriarch Grethan",
+		"a Dralhuan guard",
+		"a Dralhuan man",
+		"a Dralhuan woman",
+		"an elderly apothecary",
+		"an energetic young boy",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>Squall Cleft</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["Squall Cleft"] = {
+	"a hydroform colossus",
+	"a hydroform monstrosity",
+	"a hydroform brute",
+	"a hydroform beast",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Azdun Catacombs</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobWhitelist["the Azdun Catacombs"] = {
+	"a flesh-eating slug",
+	"Malvoc, the Unholy",
+	"an accursed skeleton",
+	"an undead knight",
+	"an unravelling mummy",
+	"a decaying lich",
+	"a cursed phantasm",
+	"a vicious ghast",
+	"a shambling zombie",
+	"Underlord Seroth",
+	"Underlord Dreyvos",
+	"Rhuzios, the Mummy Lord",
+	"Ulgase, the lich crone"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+		</Script>
+	</ScriptPackage>
+</MudletPackage>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Bloodlet</name>
+			<script>local affs = { "stun", "sensitivity" }
+if matches[1]:find("stunned figure") then
+	affs = { "stun" }
+elseif matches[1]:find("dozens of tiny") then
+	affs = { "sensitivity" }
+end
+system.hunting.funcs.handleRageHit(matches[2], matches[3], "synergy", false, nil, affs)</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(\w+)'?s? daegger flits around (.+)'s stunned figure, stabbing repeatedly as small mouths along the blade feed on the blood\.$</string>
+				<string>^(\w+)'?s? daegger flies towards (.+) and attempts to stab into \w+ neck, but is only able to strike a glancing blow\.$</string>
+				<string>^(\w+)'?s? daegger stabs into (.+)'s neck, dozens of tiny mouths opening along the blade and sucking hungrily at the blood\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

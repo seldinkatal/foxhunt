@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Magmaburst</name>
+			<script>local affs = {"clumsiness", "recklessness"}
+if matches[1]:find("helpless form") then
+	affs = { "clumsiness" }
+elseif not matches[1]:find("over confident") then
+	affs = { "recklessness" }
+end
+system.hunting.funcs.handleRageHit(string.lower(matches[2]), matches[3], "synergy", false, nil, affs)</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(You) call up a column of magma to strike down (.+), but \w+ steps back away from the danger\.$</string>
+				<string>^(\w+) calls up a colunn of magma to strike down (.+), but \w+ quickly steps back out of danger\.$</string>
+				<string>^(\w+) calls up a column of magma to strike down (.+), but \w+ quickly steps back out of danger\.$</string>
+				<string>^(\w+) calls up a column of magma, sending it crashing down upon the helpless form of (.+)\.$</string>
+				<string>^(You) call up a column of magma, sending it crashing over the helpless form of (.+)\.$</string>
+				<string>^(\w+) summons up a column of magma, sending it crashing down upon the over confident form of (.+)\.$</string>
+				<string>^(You) call up a column of magma, sending it crashing down upon the over confident form of (.+)\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Crunch</name>
+			<script>if system.hunting.funcs.isHuntingTarget(matches[2]) then
+	system.hunting.funcs.razeShield()
+end</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(You) launch a magma\-wreathed fist at (.+), but \w+ ducks aside at the last moment\.$</string>
+				<string>^(\w+) swings a magma\-wreathed punch at (.+), but \w+ ducks aside at the last possible moment\.$</string>
+				<string>^Impossibly fast, (\w+) brings a magma\-wreathed fist around, driving it straight through the magical shield surrounding (.+) without visible effort\.$</string>
+				<string>^(You) bring a magma\-wreathed fist around, pulverising the magical shield surrounding (.+) with a single blow\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

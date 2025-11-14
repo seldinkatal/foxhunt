@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>Blacklists</name>
+			<packageName></packageName>
+			<script>system.hunting.defs.mobBlacklist = system.hunting.defs.mobBlacklist or {}</script>
+			<eventHandlerList />
+			<Script isActive="yes" isFolder="no">
+				<name>the ruins of Phereklos</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobBlacklist["the ruins of Phereklos"] = {
+		"a formidable jade sea serpent",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Caverns of Nuskuwe</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobBlacklist["the Caverns of Nuskuwe"] = {
+		"a fire wyrm",						
+		"a wyrm whelp",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Vents of Hthrak</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobBlacklist["the Vents of Hthrak"] = {
+		"Geltar, Patriarch of the Dirangi",
+		"the ozhera matriarch",
+		"Merti, a renegade dirangi",
+}
+</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>the Istar Jungle</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobBlacklist["the Istar Jungle"] = {
+		"Rheddrian Zorinar, Revered Counsellor",
+}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>an Orcish outpost</name>
+				<packageName></packageName>
+				<script>system.hunting.defs.mobBlacklist["an Orcish outpost"] = {
+		"a mountain goat"
+}
+</script>
+				<eventHandlerList />
+			</Script>
+		</Script>
+	</ScriptPackage>
+</MudletPackage>

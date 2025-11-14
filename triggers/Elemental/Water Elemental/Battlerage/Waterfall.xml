@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Waterfall</name>
+			<script>local affs = {"weakness", "aeon"}
+if matches[1]:find("clumsy attempts") then
+	affs = { "weakness" }
+elseif not matches[1]:find("unresponsive form") then
+--	affs = { "aeon" }
+end
+system.hunting.funcs.handleRageHit(matches[2], matches[3], "synergy", false, nil, affs)
+
+
+
+</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(You) bring down a deluge upon (.+), \w+ clumsy attempts to evade your retribution not availing \w+\.$</string>
+				<string>^The amorphous form of (\w+) roils as a huge deluge of water and ice hammers down upon (.+), \w+ clumsy attempts to jump back from \w+ oncoming fate not availing \w+ at all\.</string>
+				<string>^You bring down a deluge upon (.+), but \w+ leaps back out of the range, suffering little more than a faceful of icy spray\.$</string>
+				<string>^The amorphous form of (\w+) roils as a huge deluge of ice and water falls towards (.+), but \w+ leaps back out of range, suffering little more than a faceful of icy spray\.$</string>
+				<string>^The amorphous form of (\w+) roils as a huge deluge of water and ice hammers down upon the sluggish and unresponsive form of (.+)\.$</string>
+				<string>^(You) bring down a deluge upon (.+), \w+ sluggish and unresponsive form having no hope of evading your retribution\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

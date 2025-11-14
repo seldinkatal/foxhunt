@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Incantation</name>
+			<script>if matches[2] == "You" then
+	system.hunting.vars.targetName = matches[3]
+	system.hunting.vars.attacking = true
+end
+
+if system.hunting.funcs.isHuntingTarget(matches[3]) then
+	system.hunting.funcs.razeShield()
+end</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^A resonant vibration emanates from (\w+) as \w+ invokes a rumbling, sonorous chant in the dragon tongue\. As the sound increases, (.+) jerks violently, \w+ body wracked by an unseen force\.$</string>
+				<string>^Drawing from the well of your puissance, you invoke a dramatic chant in the dragon tongue\. (You)r voice resonates with each word, culminating in a wave of magical energy that you bend to your will and thrust towards (.+), bombarding \w+ with the ancient power\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

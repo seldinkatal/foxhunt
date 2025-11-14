@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Compress</name>
+			<script>local affs = {"sensitivity", "stun"}
+if matches[1]:find("already vulnerable") then
+	affs = { "sensitivity" }
+elseif not matches[1]:find("unresponsive form") then
+	affs = { "stun" }
+end
+
+if not matches[3] then
+	matches[3] = string.lower(system.hunting.vars.targetName)
+end
+system.hunting.funcs.handleRageHit(matches[2], matches[3], "synergy", false, nil, affs)</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^(You) raise the pressure surrounding the already vulnerable form of (.+) to terrible heights, crushing the life from \w+\.$</string>
+				<string>^(You) raise the pressure surrounding (.+) to terrible heights, but \w+ manages to struggle free of your intangible grasp\.$</string>
+				<string>^(\w+) brings \w+ hands together in a resounding clap, but nothing seems to happen\.$</string>
+				<string>^(You) raise the pressure surrounding the unresponsive form of (.+) to terrible heights, seeking to crush the life from \w+\.$</string>
+				<string>^(\w+) brings \w+ hands together in a resounding clap, and blood begins to leak from the eyes of (.+)\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Hiru</name>
+			<script>if matches[2] == "you" then
+	system.hunting.vars.targetName = matches[3]
+	system.hunting.vars.attacking = true
+end
+
+if system.hunting.funcs.isHuntingTarget(matches[3]) then
+	system.hunting.funcs.razeShield()
+end</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^Whirling .+ in a tight arc, (you) bring the weapon around to crash into the side of the head of (.+)\.$</string>
+				<string>^Snapping back into a ready stance, (you) whirl .+ in a long sweep at the head of (.+)\.$</string>
+				<string>^(\w+) whips .+ in a tight arc, sweeping it at the head of (.+)\.$</string>
+				<string>^Snapping back into a ready stance, (\w+) whips .+ in a wide arc at the head of (.+)\.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Info Here Line</name>
+			<script>local area = gmcp.Room.Info.area
+local whitelist = system.hunting.defs.mobWhitelist[area] or {}
+local blacklist = system.hunting.defs.mobBlacklist[area] or {}
+
+for _, v in ipairs(gmcp.Char.Items.List.items) do
+  if v.attrib == "m" and matches[2] == v.name then
+    local whitelisted = table.contains(whitelist, matches[2])
+    local blacklisted = table.contains(blacklist, matches[2])
+    local click_action
+    local color
+    local tooltip
+    
+    if whitelisted and blacklisted then
+      -- Umm, okay, click to remove both, I guess?
+      color = "deep_pink"
+      click_action = [[
+        system.hunting.funcs.removeWhitelist("]]..area..[[", "]]..v.name..[[", nil, false)
+        system.hunting.funcs.removeBlacklist("]]..area..[[", "]]..v.name..[[", nil, false)
+      ]]
+      tooltip = "Remove from both whitelist and blacklist"
+    elseif whitelisted then
+      color = "green"
+      click_action = [[
+        system.hunting.funcs.removeWhitelist("]]..area..[[", "]]..v.name..[[", nil, false)
+        system.hunting.funcs.addBlacklist("]]..area..[[", "]]..v.name..[[", nil, false)
+      ]]
+      tooltip = "Move from whitelist to blacklist"
+    elseif blacklisted then
+      color = "red"
+      click_action = [[
+        system.hunting.funcs.removeBlacklist("]]..area..[[", "]]..v.name..[[", nil, false)
+      ]]
+      tooltip = "Remove from blacklist"
+    else
+      color = "white"
+      click_action = [[
+        system.hunting.funcs.addWhitelist("]]..area..[[", "]]..v.name..[[", nil, false)
+      ]]
+      tooltip = "Add to whitelist"
+    end
+    
+    selectCaptureGroup(2)
+    fg(color)
+    setUnderline(true)
+    setLink(click_action..[[expandAlias("ih")]], tooltip)
+    deselect()
+    resetFormat()
+  end
+end</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^\S+ +(\S.+)$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+</MudletPackage>
