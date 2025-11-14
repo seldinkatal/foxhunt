@@ -3,8 +3,11 @@ Adaptation of the Foxhunt system updated by Seldin Ka'Tal.
 
 ## Credits
 Armali - Original Foxhunt creator
+
 Orinna - Orion support
+
 Fendo - Wundersys support, support for some classes (i.e. Unnamable)
+
 Seldin - New features, bug fixes, Bard attack strategem update
 
 ## Features
