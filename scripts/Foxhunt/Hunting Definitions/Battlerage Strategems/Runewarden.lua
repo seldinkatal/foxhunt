@@ -2,6 +2,7 @@ local class = "runewarden"
 
 system.hunting.defs.battlerageStrategems[class] = system.hunting.defs.battlerageStrategems[class] or {}
 
+system.hunting.defs.battlerageStrategems[class].none = system.hunting.defs.battlerageStrategems.general.none
 system.hunting.defs.battlerageStrategems[class].dam = system.hunting.defs.battlerageStrategems.general.noraze
 system.hunting.defs.battlerageStrategems[class].raze = system.hunting.defs.battlerageStrategems.general.dam
 

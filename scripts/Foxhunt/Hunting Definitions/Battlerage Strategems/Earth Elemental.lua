@@ -2,6 +2,7 @@ local class = "earth elemental"
 
 system.hunting.defs.battlerageStrategems[class] = system.hunting.defs.battlerageStrategems[class] or {}
 
+system.hunting.defs.battlerageStrategems[class].none = system.hunting.defs.battlerageStrategems.general.none
 system.hunting.defs.battlerageStrategems[class].dam = system.hunting.defs.battlerageStrategems.general.dam
 system.hunting.defs.battlerageStrategems[class].stun = system.hunting.defs.battlerageStrategems.general.aff1
 system.hunting.defs.battlerageStrategems[class].noraze = system.hunting.defs.battlerageStrategems.general.noraze

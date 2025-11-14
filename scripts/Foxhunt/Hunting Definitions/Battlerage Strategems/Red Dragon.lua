@@ -2,6 +2,7 @@ local class = "red dragon"
 
 system.hunting.defs.battlerageStrategems[class] = system.hunting.defs.battlerageStrategems[class] or {}
 
+system.hunting.defs.battlerageStrategems[class].none = system.hunting.defs.battlerageStrategems.general.none
 system.hunting.defs.battlerageStrategems[class].dam = system.hunting.defs.battlerageStrategems.general.noraze
 system.hunting.defs.battlerageStrategems[class].reck = system.hunting.defs.battlerageStrategems.general.aff1noraze
 system.hunting.defs.battlerageStrategems[class].inhi = system.hunting.defs.battlerageStrategems.general.aff2noraze
