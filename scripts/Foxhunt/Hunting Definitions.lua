@@ -3,7 +3,7 @@ local mobBlacklist = {}
 local attackStrategems = {}
 local battlerageStrategems = {}
 
-if system.hunting.defs ~= nil then
+if system.hunting.defs then
 	mobWhitelist = system.hunting.defs.mobWhitelist or {}
 	mobBlacklist = system.hunting.defs.mobBlacklist or {}
 	attackStrategems = system.hunting.defs.attackStrategems or {}
