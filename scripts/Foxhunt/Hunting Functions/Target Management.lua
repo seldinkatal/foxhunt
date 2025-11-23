@@ -17,7 +17,7 @@ function system.hunting.funcs.razeShield()
 		vars.targetShield = nil
 
 		if vars.useQueueing then
-			funcs.resetLimiter("setting")
+			funcs.removeLimiter("setting")
 		end
 	end
 end
@@ -35,7 +35,7 @@ function system.hunting.funcs.addShield()
 	vars.targetShield.timer = tempTimer(3, [[system.hunting.funcs.razeShield()]])
 
 	if vars.useQueueing then
-		funcs.resetLimiter("setting")
+		funcs.removeLimiter("setting")
 	end
 end
 

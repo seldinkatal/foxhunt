@@ -328,7 +328,7 @@ function system.hunting.funcs.checkAndClearQueue()
 	if vars.useQueueing and (vars.attackQueued or vars.limiters.hunting) then
 		send("clearqueue all", false)
 		vars.attackQueued = false
-		funcs.resetLimiter("hunting")
+		funcs.removeLimiter("hunting")
 	end
 end
 

@@ -109,12 +109,6 @@ function system.hunting.funcs.isHindered()
 	end
 end
 
-function system.hunting.funcs.resetLimiter(limiter)
-	system.hunting.funcs.killTimer(system.hunting.vars.limiters[limiter])
-	system.hunting.vars.limiters[limiter] = nil
-end
-
-
 function system.hunting.funcs.getDragonBreath()
 	return system.hunting.defs.dragonBreath[system.hunting.funcs.getClass()] or ""
 end
