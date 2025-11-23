@@ -69,10 +69,8 @@ function useHuntingAttack()
 			if vars.targetingMode == "manual" then
 				vars.attacking = false
 			elseif not vars.limiters.targeting or targetChanged then
-				-- We want to make sure we're not doubling-up on timers, so we're going to kill off any existing timer
-				funcs.killTimer(vars.limiters.targeting)
-				-- Create a new timer
-				vars.limiters.targeting = tempTimer(0.5, [[system.hunting.vars.limiters.targeting = nil]])
+				-- Create a new limiter
+				funcs.setLimiter("targeting")
 
 				sendGMCP([[IRE.Target.Set "]] ..target.. [["]])
 
@@ -105,7 +103,8 @@ function useHuntingAttack()
 						end
 						funcs.queueAttack()
 					end
-				elseif not vars.limiters.hunting then
+				elseif not vars.limiters.hunting and funcs.checkEB() then
+					funcs.setLimiter("hunting")
 					funcs.createAlias(action)
 					funcs.executeAction("HUNTING_ATTACK")
 				end
@@ -116,8 +115,7 @@ function useHuntingAttack()
 				if vars.debug then
 					echo("battlerage: " .. action)
 				end
-				funcs.killTimer(vars.limiters.battlerage)
-				vars.limiters.battlerage = tempTimer(0.5, [[system.hunting.vars.limiters.battlerage = nil]])
+				funcs.setLimiter("battlerage")
 				funcs.executeAction(action)
 			end
 		end

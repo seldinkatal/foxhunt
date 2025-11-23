@@ -1,4 +1,8 @@
 system.hunting.vars = system.hunting.vars or {
+	["customGold"] = {
+		"put sovereigns in pack"
+	},
+
 	["hunting"] = false,
 	["targetEnabled"] = false,
 

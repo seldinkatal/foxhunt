@@ -11,11 +11,7 @@ if system.hunting.defs ~= nil then
 end
 
 system.hunting.defs = {
-	["version"] = "1.5.0",
-
-	["customGold"] = {
-		"put sovereigns in pack"
-	},
+	["version"] = "1.5.1",
 
 	["afflictionDuration"] = {
 		["sensitivity"] = 8.5,

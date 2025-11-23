@@ -126,6 +126,16 @@ function system.hunting.funcs.killTimer(timerID)
 	end
 end
 
+function system.hunting.funcs.setLimiter(limiterName)
+	system.hunting.funcs.killTimer(system.hunting.vars.limiters[limiterName])
+	system.hunting.vars.limiters[limiterName] = tempTimer(0.5, [[system.hunting.vars.limiters.]] .. limiterName .. [[ = nil]])
+end
+
+function system.hunting.funcs.removeLimiter(limiterName)
+	system.hunting.funcs.killTimer(system.hunting.vars.limiters[limiterName])
+	system.hunting.vars.limiters[limiterName] = nil
+end
+
 function system.hunting.funcs.getSkillRank(skill)
 	-- A value of -1 will indicate you don't have the skill
 	local skillRank = -1

@@ -196,7 +196,7 @@ function system.hunting.funcs.customQueueAttack()
 	local funcs = system.hunting.funcs
 	-- Add your logical checks here
 	if false then
-		vars.limiters.hunting = tempTimer(0.5, [[system.hunting.vars.limiters.hunting = nil]])
+		funcs.setLimiter("hunting")
 	end
 end
 
@@ -210,8 +210,8 @@ function system.hunting.funcs.createAlias(action)
 	local vars = system.hunting.vars
 	local defs = system.hunting.defs
 	local funcs = system.hunting.funcs
-	funcs.killTimer(vars.limiters.setting)
-	vars.limiters.setting = tempTimer(0.5, [[system.hunting.vars.limiters.setting = nil]])
+
+	funcs.setLimiter("setting")
 	funcs.executeAction("setalias HUNTING_ATTACK " .. action)
 end
 
@@ -239,7 +239,7 @@ function system.hunting.funcs.queueAttack()
 	end
 
 	if add == true then
-		system.hunting.vars.limiters.hunting = tempTimer(0.5, [[system.hunting.vars.limiters.hunting = nil]])
+		funcs.setLimiter("hunting")
 		funcs.executeAction("queue addclear freestand HUNTING_ATTACK")
 	end
 end
@@ -339,10 +339,10 @@ function system.hunting.funcs.checkAndGrab()
 	if vars.attacking then
 		if vars.autoGrabGold then
 			if vars.goldDropped then
-				send("queue prepend eb get sovereigns" .. vars.separator .. table.concat(defs.customGold, vars.separator), false)
+				send("queue prepend eb get sovereigns" .. vars.separator .. table.concat(vars.customGold, vars.separator), false)
 				vars.goldDropped = false
 			elseif vars.goldAttracted then
-				send("queue prepend eb " .. table.concat(defs.customGold, vars.separator), false)
+				send("queue prepend eb " .. table.concat(vars.customGold, vars.separator), false)
 				vars.goldAttracted = false
 			end
 		end
