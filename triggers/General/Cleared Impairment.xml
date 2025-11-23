@@ -4,8 +4,7 @@
 	<TriggerPackage>
 		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 			<name>Cleared Impairment</name>
-			<script>system.hunting.funcs.killTimer(system.hunting.vars.limiters.hunting)
-system.hunting.vars.limiters.hunting = nil</script>
+			<script>system.hunting.funcs.removeLimiter("hunting")</script>
 			<triggerType>0</triggerType>
 			<conditonLineDelta>0</conditonLineDelta>
 			<mStayOpen>0</mStayOpen>
