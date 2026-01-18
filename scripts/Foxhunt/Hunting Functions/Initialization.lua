@@ -15,7 +15,7 @@ function system.hunting.funcs.loadHConfig(class)
 		useQueueing = 1,
 		whitelistPriorityOrder = 1,
 		separator = "||",
-    showPrompt = 1,
+		showPrompt = 1,
 	}
 
 	local database = system.hunting.db
@@ -26,22 +26,22 @@ function system.hunting.funcs.loadHConfig(class)
 	-- Update what we currently have stored
 	if dbconfig then
 		for i, config in ipairs(dbconfig) do
-      if config then
-  			if config.value == "false" then
-  				config.value = false
-  			elseif config.value == "true" then
-  				config.value = true
-  			end
-  
-  			system.hunting.vars[config.name] = config.value
-  			-- For every hconfig we have retrieved from the database, remove it from the hconfigs table so that we don't rewrite it
-  			hconfigs[config.name] = nil
-      end
+			if config then
+				if config.value == "false" then
+					config.value = false
+				elseif config.value == "true" then
+					config.value = true
+				end
+
+				system.hunting.vars[config.name] = config.value
+				-- For every hconfig we have retrieved from the database, remove it from the hconfigs table so that we don't rewrite it
+				hconfigs[config.name] = nil
+			end
 		end
 	end
 
-	if dbprofile[class] then
-		system.hunting.funcs.loadProfile(dbprofile[class])
+	if dbprofile[1] then
+		system.hunting.funcs.loadProfile(dbprofile[1])
 		hprofile = nil
 	end
 
@@ -83,87 +83,88 @@ function system.hunting.funcs.updateHConfig(name, value)
 	end
 end
 
-system.hunting.funcs.loadWhitelists = 
-	function()
-		local database = system.hunting.db
-		local dbconfig = db:fetch(database.whitelist, nil, { database.whitelist.area, database.whitelist.pos })
-		local whitelists = {}
+function system.hunting.funcs.loadWhitelists()
+	local database = system.hunting.db
+	local dbconfig = db:fetch(database.whitelist, nil, { database.whitelist.area, database.whitelist.pos })
+	local whitelists = {}
 
-		for i, config in ipairs(dbconfig) do
-			if not whitelists[config.area] then
-				system.hunting.defs.mobWhitelist[config.area] = {}
-				whitelists[config.area] = 1
-			end
-	
-			table.insert(system.hunting.defs.mobWhitelist[config.area], config.name)
-
-			if config.ignore > 0 then
-				if not system.hunting.vars.ignoredWhitelist[config.area] then
-					system.hunting.vars.ignoredWhitelist[config.area] = {}
-				end
-				system.hunting.vars.ignoredWhitelist[config.area][config.name] = 1
-			end
+	for i, config in ipairs(dbconfig) do
+		-- Go through and add a reference for every whitelist currently stored in the database
+		if not whitelists[config.area] then
+			-- Clear the currently stored whitelist in preparation of loading the whitelist from the database
+			system.hunting.defs.mobWhitelist[config.area] = {}
+			whitelists[config.area] = 1
 		end
 
-		for area,_ in pairs(system.hunting.defs.mobWhitelist) do
-			if not whitelists[area] then
-				for i, mob in ipairs(system.hunting.defs.mobWhitelist[area]) do
-					db:add(database.whitelist, { area = area, pos = i, name = mob })
-				end
+		-- Insert the row from the database into the variables
+		table.insert(system.hunting.defs.mobWhitelist[config.area], config.name)
+
+		-- Handle ignored denizens
+		if config.ignore > 0 then
+			if not system.hunting.vars.ignoredWhitelist[config.area] then
+				system.hunting.vars.ignoredWhitelist[config.area] = {}
 			end
+			system.hunting.vars.ignoredWhitelist[config.area][config.name] = 1
 		end
 	end
+
+	-- Check and handle any area not loaded from the database
+	for area,_ in pairs(system.hunting.defs.mobWhitelist) do
+		if not whitelists[area] then
+			-- No configured whitelist for this area - the user has likely removed it. Clear it
+			system.hunting.defs.mobWhitelist[area] = {}
+		end
+	end
+end
 system.hunting.funcs.loadWhitelists()
 
-system.hunting.funcs.loadBlacklists = 
-	function()
-		local database = system.hunting.db
-		local dbconfig = db:fetch(database.blacklist, nil, { database.blacklist.area, database.blacklist.pos })
-		local blacklists = {}
+function system.hunting.funcs.loadBlacklists()
+	local database = system.hunting.db
+	local dbconfig = db:fetch(database.blacklist, nil, { database.blacklist.area, database.blacklist.pos })
+	local blacklists = {}
 
-		for i, config in ipairs(dbconfig) do
-			if config.area == "GLOBAL" and not blacklists.GLOBAL then 
-				system.hunting.defs.globalBlacklist = {}
-			elseif not blacklists[config.area] then
-				system.hunting.defs.mobBlacklist[config.area] = {}
-			end
-			blacklists[config.area] = 1
+	for i, config in ipairs(dbconfig) do
+		if config.area == "GLOBAL" and not blacklists.GLOBAL then 
+			system.hunting.defs.globalBlacklist = {}
+		elseif not blacklists[config.area] then
+			system.hunting.defs.mobBlacklist[config.area] = {}
+		end
+		blacklists[config.area] = 1
 
-			if config.area == "GLOBAL" then
-				table.insert(system.hunting.defs.globalBlacklist, config.name)
-			else 	
-				table.insert(system.hunting.defs.mobBlacklist[config.area], config.name)
-			end
-
-			if config.ignore > 0 then
-				if not system.hunting.vars.ignoredBlacklist[config.area] then
-					system.hunting.vars.ignoredBlacklist[config.area] = {}
-				end
-				system.hunting.vars.ignoredBlacklist[config.area][config.name] = 1
-			end
+		if config.area == "GLOBAL" then
+			table.insert(system.hunting.defs.globalBlacklist, config.name)
+		else 	
+			table.insert(system.hunting.defs.mobBlacklist[config.area], config.name)
 		end
 
-		for area,_ in pairs(system.hunting.defs.mobBlacklist) do
-			if not blacklists[area] then
-				for i, mob in ipairs(system.hunting.defs.mobBlacklist[area]) do
-					db:add(database.blacklist, { area = area, pos = i, name = mob })
-				end
+		if config.ignore > 0 then
+			if not system.hunting.vars.ignoredBlacklist[config.area] then
+				system.hunting.vars.ignoredBlacklist[config.area] = {}
 			end
+			system.hunting.vars.ignoredBlacklist[config.area][config.name] = 1
 		end
+	end
 
-		if not blacklists.GLOBAL then
-			for i, mob in ipairs(system.hunting.defs.globalBlacklist) do
-				db:add(database.blacklist, { area = "GLOBAL", pos = i, name = mob })
+	for area,_ in pairs(system.hunting.defs.mobBlacklist) do
+		if not blacklists[area] then
+			for i, mob in ipairs(system.hunting.defs.mobBlacklist[area]) do
+				db:add(database.blacklist, { area = area, pos = i, name = mob })
 			end
 		end
 	end
+
+	if not blacklists.GLOBAL then
+		for i, mob in ipairs(system.hunting.defs.globalBlacklist) do
+			db:add(database.blacklist, { area = "GLOBAL", pos = i, name = mob })
+		end
+	end
+end
 system.hunting.funcs.loadBlacklists()
 
-system.hunting.funcs.initialize = 
-	function()	
-		if gmcp ~= nil then
-			gmod.enableModule(gmcp.Char.Status.name, "IRE.Target")
-			sendGMCP([[Core.Supports.Add ["IRE.Target 1"] ]])
-		end
-		system.hunting.funcs.loadHConfig()
+function system.hunting.funcs.initialize()
+	if gmcp then
+		gmod.enableModule(gmcp.Char.Status.name, "IRE.Target")
+		sendGMCP([[Core.Supports.Add ["IRE.Target 1"] ]])
 	end
+	system.hunting.funcs.loadHConfig()
+end

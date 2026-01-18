@@ -11,7 +11,7 @@ if system.hunting.defs then
 end
 
 system.hunting.defs = {
-	["version"] = "1.5.1",
+	["version"] = "1.6.0",
 
 	["afflictionDuration"] = {
 		["sensitivity"] = 8.5,

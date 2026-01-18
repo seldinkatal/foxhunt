@@ -156,8 +156,14 @@ function system.hunting.funcs.reloadProfile()
 	local funcs = system.hunting.funcs
 	local class = funcs.getClass()
 	local database = system.hunting.db
+	if system.hunting.vars.debug then
+		echo("\nReloading Profile!\n")
+	end
 	local profile = db:fetch(database.profile, db:eq(database.profile.name, class))[1]
 	if not profile then
+		if system.hunting.vars.debug then
+			echo("Profile does not exist\n")
+		end
 		profile = funcs.createProfile()
 	end
 	funcs.loadProfile(profile)
@@ -166,11 +172,20 @@ end
 function system.hunting.funcs.loadProfile(profile)
 	local vars = system.hunting.vars
 	if profile then
+		if vars.debug then
+			echo("Loading profile:\n" .. profile.name .. "\n")
+			echo("  Name:    " .. profile.name .. "\n")
+			echo("  AtStrat: " .. profile.attackMode .. "\n")
+			echo("  BRStrat: " .. profile.battlerageMode .. "\n")
+		end
 		vars.profile = profile.name
 		vars.attackMode = profile.attackMode
 		vars.battlerageMode = profile.battlerageMode
 	else
 		vars.profile = system.hunting.funcs.getClass()
+		if vars.debug then
+			echo("FIXME: loadingProfile() PROFILE WAS NOT FOUND\n")
+		end
 	end
 end
 
@@ -179,11 +194,9 @@ function system.hunting.funcs.createProfile()
 	local database = system.hunting.db
 	local profile = db:fetch(database.profile, db:eq(database.profile.name, class))[1]
 	if not profile then
-		echo("RESET PROFILE FOR " .. string.upper(class) .. "!!!!\n")
-		echo("RESET PROFILE FOR " .. string.upper(class) .. "!!!!\n")
-		echo("RESET PROFILE FOR " .. string.upper(class) .. "!!!!\n")
-		echo("RESET PROFILE FOR " .. string.upper(class) .. "!!!!\n")
-		echo("RESET PROFILE FOR " .. string.upper(class) .. "!!!!\n")
+		if system.hunting.vars.debug then
+			echo("FIXME: RESET PROFILE FOR " .. string.upper(class) .. "!!!!\n")
+		end
 		profile = { name = class, attackMode = "dam", battlerageMode = "dam" }
 		db:add(database.profile, profile)
 		system.hunting.funcs.loadProfile(profile)
@@ -292,7 +305,7 @@ function system.hunting.funcs.tryOverride(action)
 			vars.limiters.setting = nil
 		end
 
-    send(" ")
+		send(" ")
 	else
 		vars.actionOverride = false
 		vars.newAction = nil
@@ -308,7 +321,13 @@ function system.hunting.funcs.myPrepend()
 
 		if system.hunting.funcs.getClass() == "fire elemental" then
 			if ori.cla.fire.bals.slough and ori.vitals.spark == 4 and (ori.affs.blackout or ori.ssc.unknownAffs > 0) then
+				system.hunting.vars.firelord.invokeAction = "slough"
 				prepend = prepend .. "slough impurities invoke" .. system.hunting.vars.separator
+			end
+		end
+		if system.hunting.funcs.getClass() == "earth elemental" then
+			if (ori.affs.blackout or ori.ssc.unknownAffs > 0) and not ori.affs.weariness and not system.hunting.vars.earthlord.eruptionCooldown then
+				prepend = prepend .. "terran eruption" .. system.hunting.vars.separator
 			end
 		end
 	end
@@ -328,7 +347,7 @@ function system.hunting.funcs.checkAndClearQueue()
 	if vars.useQueueing and (vars.attackQueued or vars.limiters.hunting) then
 		send("clearqueue all", false)
 		vars.attackQueued = false
-		funcs.removeLimiter("hunting")
+		funcs.resetLimiter("hunting")
 	end
 end
 

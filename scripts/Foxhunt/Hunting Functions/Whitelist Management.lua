@@ -54,8 +54,8 @@ system.hunting.funcs.ignoreWhitelist =
 
 system.hunting.funcs.addWhitelist = 
 	function(area, entry, position, display)
-    display = display ~= false
-    
+		display = display ~= false
+
 		if not area then
 			if gmcp then
 				area = gmcp.Room.Info.area
@@ -66,7 +66,7 @@ system.hunting.funcs.addWhitelist =
 			end
 		end
 
-		local whitelist = system.hunting.defs.mobWhitelist[area]		
+		local whitelist = system.hunting.defs.mobWhitelist[area]
 
 		if not whitelist then 
 			whitelist = {}
@@ -104,71 +104,70 @@ system.hunting.funcs.addWhitelist =
 		db:add(database, { area = area, pos = position, name = entry })
 
 		table.insert(system.hunting.defs.mobWhitelist[area], position, entry)
-    if display then
-		  system.hunting.funcs.displayWhitelist(area)
-    end
+		if display then
+			system.hunting.funcs.displayWhitelist(area)
+		end
 	end
 
-system.hunting.funcs.removeWhitelist = 
-	function(area, entry, position, display)
-    display = display ~= false
-    
-		if not area then
-			if gmcp then
-				area = gmcp.Room.Info.area
-			else
-				echo("No area specified.\n")
-				send(" ")
-				return
-			end
-		end
+function system.hunting.funcs.removeWhitelist(area, entry, position, display)
+	display = display ~= false
 
-		local whitelist = system.hunting.defs.mobWhitelist[area]		
-
-		if not whitelist or #whitelist == 0 then 
-			echo("A whitelist does not exist for this area, or is empty.\n")
+	if not area then
+		if gmcp then
+			area = gmcp.Room.Info.area
+		else
+			echo("No area specified.\n")
 			send(" ")
 			return
 		end
-
-		if (position and position < 1)
-			or (position and position > #whitelist)
-		then 
-			echo("That position does not exist in the whitelist.\n")
-			send(" ")
-			return
-		end
-		
-		local database = system.hunting.db.whitelist
-		local oldRow = db:fetch(database, db:AND(db:eq(database.name, entry), db:eq(database.area, area)))[1]
-		if position then
-			oldRow = db:fetch(database, db:AND(db:eq(database.name, entry), db:eq(database.area, area), db:eq(database.pos, position)))[1]
-		elseif oldRow then
-			position = oldRow.pos 
-		end
-	
-		if not oldRow then
-			echo("That entry does not exist in the whitelist.\n")
-			send(" ")
-			return
-		end
-
-		db:delete(database, oldRow._row_id)
-		
-		if position < #whitelist then
-			for i=position+1, #whitelist, 1 do
-				local row = db:fetch(database, db:AND(db:eq(database.pos, i), db:eq(database.area, area)))[1]
-				row.pos = tostring(i - 1)
-				db:update(database, row)
-			end
-		end
-
-		table.remove(system.hunting.defs.mobWhitelist[area], position)
-
-    if display then
-		  system.hunting.funcs.displayWhitelist(area)
-    end
 	end
+
+	local whitelist = system.hunting.defs.mobWhitelist[area]
+
+	if not whitelist or #whitelist == 0 then 
+		echo("A whitelist does not exist for this area, or is empty.\n")
+		send(" ")
+		return
+	end
+
+	if (position and position < 1)
+		or (position and position > #whitelist)
+	then 
+		echo("That position does not exist in the whitelist.\n")
+		send(" ")
+		return
+	end
+
+	local database = system.hunting.db.whitelist
+	local oldRow = db:fetch(database, db:AND(db:eq(database.name, entry), db:eq(database.area, area)))[1]
+	if position then
+		oldRow = db:fetch(database, db:AND(db:eq(database.name, entry), db:eq(database.area, area), db:eq(database.pos, position)))[1]
+	elseif oldRow then
+		position = oldRow.pos 
+	end
+
+	if not oldRow then
+		echo("That entry does not exist in the whitelist.\n")
+		send(" ")
+		return
+	end
+
+	db:delete(database, oldRow._row_id)
+
+	if position < #whitelist then
+		for i=position+1, #whitelist, 1 do
+			local row = db:fetch(database, db:AND(db:eq(database.pos, i), db:eq(database.area, area)))[1]
+			row.pos = tostring(i - 1)
+			db:update(database, row)
+		end
+	end
+
+	table.remove(system.hunting.defs.mobWhitelist[area], position)
+
+	if display then
+		system.hunting.funcs.displayWhitelist(area)
+	end
+end
 
 system.hunting.funcs.shiftWhitelist =
 	function(area, entry, direction, amount)
@@ -182,7 +181,7 @@ system.hunting.funcs.shiftWhitelist =
 			end
 		end
 
-		local whitelist = system.hunting.defs.mobWhitelist[area]		
+		local whitelist = system.hunting.defs.mobWhitelist[area]
 
 		if not whitelist then return end
 

@@ -50,7 +50,7 @@ system.hunting.vars = system.hunting.vars or {
 	["attackedRoom"] = false,
 	["movedRooms"] = false,
 	["newPeopleInRoom"] = false,
-	
+
 	["fleeing"] = false,
 
 	["blackout"] = false,
@@ -61,5 +61,16 @@ system.hunting.vars = system.hunting.vars or {
 		{
 			["br"] = true,
 			["brTimer"] = "",
-		}
+		},
+	["earthlord"] = {
+		["titan"] = false,
+		["titanCooldown"] = false,
+		["eruptionCooldown"] = false
+	},
+	["firelord"] = {
+		["invokeAction"] = nil
+	},
+	["resources"] = {},
+	["previousClass"] = nil,
+	["currentClass"] = nil,
 }
